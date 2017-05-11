@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink as Link, Route } from 'react-router-dom';
+import axios from 'axios';
 import routes from '../../routers/index';
 import RouteWithSubRoutes from '../../routers/config';
+import Home from '../home';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menus: []
+    };
+  }
+
+  async componentDidMount() {
+    if (!this.state.menus.length) {
+      let response = await axios.get('/data/menu.json');
+      let menus = response.data;
+      this.setState({ menus });
+    }
+  }
+
   render() {
     return (
       <div className="app">
@@ -16,13 +34,16 @@ class App extends Component {
         <Router>
           <div className="container">
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/topics">Topics</Link></li>
+              {this.state.menus.map((menu, index) =>
+                <li key={index}>
+                  <Link to={menu.url}>{menu.name}</Link>
+                </li>
+              )}
             </ul>
 
-            {routes.map((route, i) => (
-              <RouteWithSubRoutes key={i} {...route}/>
+            <Route exact path="/" component={Home}/>
+            {routes.map((route, index) => (
+              <RouteWithSubRoutes key={index} {...route}/>
             ))}
           </div>
         </Router>

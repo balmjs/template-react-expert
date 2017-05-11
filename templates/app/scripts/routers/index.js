@@ -4,9 +4,8 @@ import TopicList from '../views/topic/list';
 import TopicDetail from '../views/topic/detail'
 
 let routes = [{
-  path: '/',
-  component: Home,
-  isExact: true
+  path: '/home',
+  component: Home
 }, {
   path: '/about',
   component: About

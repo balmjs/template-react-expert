@@ -1,35 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import RouteWithSubRoutes from '../../routers/config';
 
-const Topics = ({ routes, match }) => (
-  <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
+class Topics extends Component {
+  constructor(props) {
+    super(props);
 
-    {routes.map((route, i) => (
-      <RouteWithSubRoutes key={i} {...route}/>
-    ))}
-    <Route exact path={match.url} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
-  </div>
-);
+    this.state = {
+      submenus: [{
+        "name": "Rendering with React",
+        "url": "rendering"
+      }, {
+        "name": "Components",
+        "url": "components"
+      }, {
+        "name": "Props v. State",
+        "url": "props-v-state"
+      }]
+    };
+  }
+
+  render() {
+    let { routes, match } = this.props;
+
+    return (
+      <div>
+        <h2>Topics</h2>
+        <ul>
+          {this.state.submenus.map((menu, index) =>
+            <li key={index}>
+              <Link to={`${match.url}/${menu.url}`}>{menu.name}</Link>
+            </li>
+          )}
+        </ul>
+
+        {routes.map((route, index) => (
+          <RouteWithSubRoutes key={index} {...route}/>
+        ))}
+        <Route exact path={match.url} render={() => (
+          <h3>Please select a topic.</h3>
+        )}/>
+      </div>
+    );
+  }
+}
 
 export default Topics;
