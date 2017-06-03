@@ -23,11 +23,12 @@ balm.config = {
   },
   scripts: {
     entry: config.entry,
-    publicPath: '/',
-    vendors: config.vendors
+    publicPath: '/'
   },
   cache: true,
   assets: config.assets
+  // More Config
+  // https://github.com/balmjs/balm/blob/master/docs/configuration.md
 };
 
 balm.go(function(mix) {

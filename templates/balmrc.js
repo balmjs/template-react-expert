@@ -9,7 +9,6 @@ module.exports = {
     react: ['react', 'react-dom', 'react-router-dom'],
     main: './app/scripts/main.js' // entry js file
   },
-  vendors: ['react'],
   assets: {
     root: 'assets', // replace 'assets' to your remote project root
     publicPath: 'public'
