@@ -8,14 +8,14 @@ class Topics extends Component {
 
     this.state = {
       submenus: [{
-        "name": "Rendering with React",
-        "url": "rendering"
+        name: 'Rendering with React',
+        url: 'rendering'
       }, {
-        "name": "Components",
-        "url": "components"
+        name: 'Components',
+        url: 'components'
       }, {
-        "name": "Props v. State",
-        "url": "props-v-state"
+        name: 'Props v. State',
+        url: 'props-v-state'
       }]
     };
   }
@@ -34,12 +34,12 @@ class Topics extends Component {
           )}
         </ul>
 
-        {routes.map((route, index) => (
-          <RouteWithSubRoutes key={index} {...route}/>
-        ))}
         <Route exact path={match.url} render={() => (
           <h3>Please select a topic.</h3>
         )}/>
+        {routes.map((route, index) => (
+          <RouteWithSubRoutes key={index} {...route} />
+        ))}
       </div>
     );
   }
