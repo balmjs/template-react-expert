@@ -19,7 +19,11 @@ balm.config = {
   },
   styles: {
     ext: 'css', // PostCSS
-    autoprefixer: ['last 2 versions']
+    autoprefixer: [
+      '> 1%',
+      'last 2 versions',
+      'not ie <= 8'
+    ]
   },
   scripts: {
     entry: config.entry,
