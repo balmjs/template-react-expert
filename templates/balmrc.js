@@ -7,15 +7,15 @@ module.exports = {
   },
   entry: {
     react: ['react', 'react-dom', 'react-router-dom'],
-    main: './app/scripts/main.jsx' // entry js file
+    main: './app/scripts/main.jsx' // Entry js file
   },
   assets: {
-    root: 'assets', // replace 'assets' to your remote project root
+    root: 'assets', // Replace 'assets' to your remote project root
     publicPath: 'public'
   },
   publish: {
     'index.html': {
-      target: 'views', // replace 'views' to your remote project views path
+      target: 'views', // Replace 'views' to your remote project views path
       option: {
         basename: 'index',
         extname: '.php'

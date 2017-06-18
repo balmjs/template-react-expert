@@ -20,7 +20,7 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <p className="app-intro">thx <a href="//balmjs.com/">BalmJS</a></p>
-
+        <hr />
         <Router>
           <div className="container">
             <MyMenu />

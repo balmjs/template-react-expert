@@ -5,7 +5,7 @@ balm.config = {
   server: {
     open: true,
     proxyTable: config.proxyTable,
-    historyApiFallback: true // for react-router-dom use 'BrowserRouter'
+    historyApiFallback: true // For react-router-dom use 'BrowserRouter'
   },
   roots: {
     source: 'app'
