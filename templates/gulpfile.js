@@ -4,8 +4,7 @@ var config = require('./balmrc');
 balm.config = {
   server: {
     open: true,
-    proxyTable: config.proxyTable,
-    historyApiFallback: true // For react-router-dom use 'BrowserRouter'
+    proxyTable: config.proxyTable
   },
   roots: {
     source: 'app'
@@ -26,8 +25,7 @@ balm.config = {
     ]
   },
   scripts: {
-    entry: config.entry,
-    publicPath: '/'
+    entry: config.entry
   },
   cache: true,
   assets: config.assets
@@ -37,12 +35,12 @@ balm.config = {
 
 balm.go(function(mix) {
   if (balm.config.production) {
-    // for test
+    // For test data
     mix.copy('./app/data/*', './dist/data');
 
-    // for static
+    // Publish assets
     mix.publish();
-    // for template
+    // Publish templates
     Object.keys(config.publish).forEach(function(key) {
       mix.publish(key, config.publish[key].target, config.publish[key].option || {});
     });
