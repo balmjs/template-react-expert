@@ -36,7 +36,7 @@ class Topics extends Component {
 
         <Route exact path={match.url} render={() => (
           <h3>Please select a topic.</h3>
-        )}/>
+        )} />
         {routes.map((route, index) => (
           <RouteWithSubRoutes key={index} {...route} />
         ))}
