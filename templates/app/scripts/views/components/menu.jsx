@@ -25,7 +25,7 @@ class Menu extends Component {
         <ul className="site-menu">
           {this.state.menu.map((item, index) =>
             <li key={index}>
-              <Link to={item.url}>{item.name}</Link>
+              <Link to={item.url} replace>{item.name}</Link>
             </li>
           )}
         </ul>

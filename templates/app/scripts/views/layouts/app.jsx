@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from '../../routes/index';
 import RouteWithSubRoutes from '../../routes/config';
 import MyMenu from '../components/menu';
@@ -19,10 +19,12 @@ class App extends Component {
         <Router>
           <div className="container">
             <MyMenu />
-            <Route exact path="/" component={Home} />
-            {routes.map((route, index) => (
-              <RouteWithSubRoutes key={index} {...route} />
-            ))}
+            <Switch>
+              <Route exact path="/" component={Home} />
+              {routes.map((route, index) => (
+                <RouteWithSubRoutes key={index} {...route} />
+              ))}
+            </Switch>
           </div>
         </Router>
       </div>

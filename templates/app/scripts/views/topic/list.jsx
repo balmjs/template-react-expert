@@ -24,7 +24,7 @@ class Topics extends Component {
     let { routes, match } = this.props;
 
     return (
-      <div>
+      <div className="topic-container">
         <h2>Topics</h2>
         <ul>
           {this.state.submenus.map((menu, index) =>
@@ -35,7 +35,9 @@ class Topics extends Component {
         </ul>
 
         <Route exact path={match.url} render={() => (
-          <h3>Please select a topic.</h3>
+          <div className="page--topic topic-index">
+            <h3>Please select a topic.</h3>
+          </div>
         )} />
         {routes.map((route, index) => (
           <RouteWithSubRoutes key={index} {...route} />
