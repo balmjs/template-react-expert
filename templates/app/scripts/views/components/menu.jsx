@@ -7,15 +7,15 @@ class Menu extends Component {
     super(props);
 
     this.state = {
-      menus: []
+      menu: []
     };
   }
 
   async componentDidMount() {
-    if (!this.state.menus.length) {
+    if (!this.state.menu.length) {
       let response = await axios.get('/data/menu.json');
-      let menus = response.data;
-      this.setState({ menus });
+      let menu = response.data;
+      this.setState({ menu });
     }
   }
 
@@ -23,9 +23,9 @@ class Menu extends Component {
     return (
       <nav>
         <ul className="site-menu">
-          {this.state.menus.map((menu, index) =>
+          {this.state.menu.map((item, index) =>
             <li key={index}>
-              <Link to={menu.url}>{menu.name}</Link>
+              <Link to={item.url}>{item.name}</Link>
             </li>
           )}
         </ul>

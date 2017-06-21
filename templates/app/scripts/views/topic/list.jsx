@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import RouteWithSubRoutes from '../../routers/config';
+import RouteWithSubRoutes from '../../routes/config';
 
 class Topics extends Component {
   constructor(props) {

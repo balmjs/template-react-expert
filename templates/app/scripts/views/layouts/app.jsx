@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
-import routes from '../../routers/index';
-import RouteWithSubRoutes from '../../routers/config';
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
+import routes from '../../routes/index';
+import RouteWithSubRoutes from '../../routes/config';
 import MyMenu from '../components/menu';
 import Home from '../home';
 import logo from '../../../images/logo.svg';
@@ -20,6 +20,7 @@ class App extends Component {
           <div className="container">
             <MyMenu />
             <Route exact path="/" component={Home} />
+            <Redirect to="/home" />
             {routes.map((route, index) => (
               <RouteWithSubRoutes key={index} {...route} />
             ))}
