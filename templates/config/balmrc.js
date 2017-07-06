@@ -19,7 +19,7 @@ module.exports = {
     }
   },
   styles: {
-    ext: 'css', // PostCSS
+    ext: 'scss',
     autoprefixer: [
       '> 1%',
       'last 2 versions',

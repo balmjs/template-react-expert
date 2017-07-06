@@ -1,18 +1,18 @@
 .site-menu {
   display: flex;
   padding: 0;
-  & li {
+  li {
     width: 120px;
     list-style: none;
     text-align: center;
     border: 1px solid;
-    & a {
+    a {
       display: block;
       text-decoration: none;
       &.active {
         font-weight: bold;
-        color: white;
-        background: black;
+        color: $primaryBgColor;
+        background: $primaryColor;
       }
     }
   }
