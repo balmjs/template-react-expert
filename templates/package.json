@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",
-    "balm": "^0.7.4",
+    "balm": "^0.8.1",
     "gulp": "^3.9.1"
   }
 }
