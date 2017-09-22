@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import routes from '../../routes/index';
+import routes from '../../routes';
 import RouteWithSubRoutes from '../../routes/config';
 import MyMenu from '../components/menu';
 import Home from '../home';

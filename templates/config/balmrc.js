@@ -23,12 +23,12 @@ module.exports = {
     autoprefixer: [
       '> 1%',
       'last 2 versions',
-      'not ie <= 8'
+      'not ie < 9'
     ]
   },
   scripts: {
     entry: {
-      react: ['react', 'react-dom', 'react-router-dom'],
+      lib: ['react', 'react-dom', 'react-router-dom'],
       main: './app/scripts/main.jsx' // Entry js file
     }
   },
