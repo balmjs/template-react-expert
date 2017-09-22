@@ -28,7 +28,7 @@ module.exports = {
   },
   scripts: {
     entry: {
-      lib: ['react', 'react-dom', 'react-router-dom'],
+      lib: ['react', 'react-dom', 'react-router-dom', 'axios'],
       main: './app/scripts/main.jsx' // Entry js file
     }
   },
