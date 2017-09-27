@@ -1,25 +1,12 @@
-import Home from '../views/home';
-import About from '../views/about';
-import TopicList from '../views/topic/list';
-import TopicDetail from '../views/topic/detail';
+import baseRoutes from './base';
+import topicRoutes from './topic';
 import NotFound from '../views/not-found';
 
-let routes = [{
-  path: '/home',
-  component: Home
-}, {
-  path: '/about',
-  component: About
-}, {
-  path: '/topics',
-  component: TopicList,
-  routes: [{
-    path: '/topics/:id',
-    component: TopicDetail
-  }]
-}, {
+let notFound = [{
   path: '*',
   component: NotFound
 }];
+
+let routes = baseRoutes.concat(topicRoutes, notFound);
 
 export default routes;
