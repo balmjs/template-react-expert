@@ -2,11 +2,11 @@ import baseRoutes from './base';
 import topicRoutes from './topic';
 import NotFound from '../views/not-found';
 
-let notFound = [{
+let otherRoutes = [{
   path: '*',
   component: NotFound
 }];
 
-let routes = baseRoutes.concat(topicRoutes, notFound);
+let routes = baseRoutes.concat(topicRoutes, otherRoutes);
 
 export default routes;
