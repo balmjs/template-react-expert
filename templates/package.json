@@ -3,19 +3,19 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "gulp",
-    "prod": "gulp --production"
+    "dev": "gulp --silent",
+    "prod": "gulp --silent --production"
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.2",
+    "babel-eslint": "^8.1.2",
     "babel-preset-react": "^6.24.1",
-    "balm": "^0.11.0",
+    "balm": "^0.12.1",
     "eslint-plugin-react": "^7.5.1",
     "gulp": "^3.9.1"
   }
