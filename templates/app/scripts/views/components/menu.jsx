@@ -22,11 +22,13 @@ class Menu extends Component {
     return (
       <nav>
         <ul className="site-menu">
-          {this.state.menu.map((item, index) =>
+          {this.state.menu.map((item, index) => (
             <li key={index}>
-              <Link to={item.url} replace>{item.name}</Link>
+              <Link to={item.url} replace>
+                {item.name}
+              </Link>
             </li>
-          )}
+          ))}
         </ul>
       </nav>
     );

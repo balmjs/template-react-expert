@@ -14,7 +14,9 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="app-intro">thx <a href="//balmjs.com/">BalmJS</a></p>
+        <p className="app-intro">
+          thx <a href="//balmjs.com/">BalmJS</a>
+        </p>
         <hr />
         <Router>
           <div className="container">
