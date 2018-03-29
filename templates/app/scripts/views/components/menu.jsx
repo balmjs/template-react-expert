@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink as Link } from 'react-router-dom';
-import API from '../../api';
+import axios from 'axios';
 
 class Menu extends Component {
   constructor(props) {
@@ -11,10 +11,20 @@ class Menu extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.getMenu();
+  }
+
+  async getMenu() {
     if (!this.state.menu.length) {
-      let menu = await API.getMenu();
-      this.setState({ menu });
+      let response = await axios.get('/data/menu.json');
+      let { code, message, data } = response.data;
+      if (code === 200) {
+        let menu = data;
+        this.setState({ menu });
+      } else {
+        alert(message);
+      }
     }
   }
 
