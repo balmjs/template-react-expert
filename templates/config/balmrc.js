@@ -1,11 +1,12 @@
+// Documentation - http://balmjs.com/docs/en/configuration/toc.html
+// 中文文档 - http://balmjs.com/docs/zh-cn/configuration/toc.html
 module.exports = {
   server: {
     open: true,
-    proxyTable: {
-      '/api': {
-        target: 'http://your.project.dev',
-        changeOrigin: true
-      }
+    proxyContext: '/api',
+    proxyOptions: {
+      target: 'http://your.project.dev', // Target host
+      changeOrigin: true // Needed for virtual hosted sites
     }
   },
   roots: {
@@ -34,6 +35,4 @@ module.exports = {
     publicPath: 'public'
   }
   // More Config
-  // Documentation - http://balmjs.com/docs/en/configuration/toc.html
-  // 中文文档 - http://balmjs.com/docs/zh-cn/configuration/toc.html
 };
