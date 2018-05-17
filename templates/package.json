@@ -15,8 +15,8 @@
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "babel-preset-react": "^6.24.1",
-    "balm": "^0.20.6",
-    "eslint-plugin-react": "^7.8.1",
+    "balm": "^0.21.0",
+    "eslint-plugin-react": "^7.8.2",
     "gulp": "^3.9.1"
   }
 }
