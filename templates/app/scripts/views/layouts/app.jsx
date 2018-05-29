@@ -4,7 +4,7 @@ import routes from '../../routes';
 import RouteWithSubRoutes from '../../routes/config';
 import MyMenu from '../components/menu';
 import Home from '../home';
-import logo from '../../../images/logo.svg';
+import logo from '../../assets/logo.svg';
 
 class App extends Component {
   render() {

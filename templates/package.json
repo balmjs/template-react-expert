@@ -8,14 +8,14 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "babel-preset-react": "^6.24.1",
-    "balm": "^0.21.1",
+    "balm": "^0.22.0",
     "eslint-plugin-react": "^7.8.2",
     "gulp": "^3.9.1"
   }
