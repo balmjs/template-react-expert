@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import routes from '../../routes';
-import RouteWithSubRoutes from '../../routes/config';
-import MyMenu from '../components/menu';
-import Home from '../home';
-import logo from '../../assets/logo.svg';
+import routes from '@/routes';
+import RouteWithSubRoutes from '@/routes/config';
+import MyMenu from '@/views/components/menu';
+import Home from '@/views/home';
+import logo from '@/assets/logo.svg';
 
 class App extends Component {
   render() {

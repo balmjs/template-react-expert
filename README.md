@@ -24,4 +24,4 @@ npm run dev
 npm run prod
 ```
 
-> thx [BalmJS](http://balmjs.com/)
+> thx [BalmJS](https://balmjs.com/)

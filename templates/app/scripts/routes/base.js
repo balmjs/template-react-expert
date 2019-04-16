@@ -1,5 +1,5 @@
-import Home from '../views/home';
-import About from '../views/about';
+import Home from '@/views/home';
+import About from '@/views/about';
 
 let baseRoutes = [
   {

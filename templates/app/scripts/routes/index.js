@@ -1,6 +1,6 @@
 import baseRoutes from './base';
 import topicRoutes from './topic';
-import NotFound from '../views/not-found';
+import NotFound from '@/views/not-found';
 
 let otherRoutes = [
   {

@@ -1,5 +1,5 @@
-import TopicList from '../views/topic/list';
-import TopicDetail from '../views/topic/detail';
+import TopicList from '@/views/topic/list';
+import TopicDetail from '@/views/topic/detail';
 
 let topicRoutes = [
   {
