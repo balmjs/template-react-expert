@@ -13,12 +13,11 @@
     "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.2",
-    "balm": "^1.5.7",
-    "eslint": "^6.0.1",
-    "eslint-plugin-react": "^7.14.2",
+    "balm": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "gulp": "^4.0.2"
   },
   "private": true
