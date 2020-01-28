@@ -3,19 +3,25 @@
 }
 
 .app-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .app-header {
-  background-color: #222;
+  background-color: #282c34;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.app-intro {
-  font-size: large;
+.app-link {
+  color: #61dafb;
 }
 
 .container {

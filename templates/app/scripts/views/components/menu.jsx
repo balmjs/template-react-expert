@@ -1,48 +1,41 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import axios from 'axios';
+import { isProd } from '@/config';
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
+function MyMenu() {
+  let [menu, setMenu] = useState([]);
 
-    this.state = {
-      menu: []
-    };
-  }
-
-  componentDidMount() {
-    this.getMenu();
-  }
-
-  async getMenu() {
-    if (!this.state.menu.length) {
-      let response = await axios.get('/data/menu.json');
+  useEffect(() => {
+    const fetchData = async () => {
+      let url = `/api/menu${isProd ? '.json' : ''}`;
+      let response = await axios.get(url);
       let { code, message, data } = response.data;
       if (code === 200) {
-        let menu = data;
-        this.setState({ menu });
+        setMenu(data);
       } else {
         alert(message);
       }
-    }
-  }
+    };
 
-  render() {
-    return (
-      <nav>
-        <ul className="site-menu">
-          {this.state.menu.map((item, index) => (
-            <li key={index}>
-              <Link to={item.url} replace>
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    );
-  }
+    if (!menu.length) {
+      fetchData();
+    }
+  });
+
+  return (
+    <nav>
+      <ul className="site-menu">
+        {menu.map((item, index) => (
+          <li key={index}>
+            <Link to={item.url} replace>
+              {item.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 }
 
-export default Menu;
+export default MyMenu;

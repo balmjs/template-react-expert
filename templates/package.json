@@ -1,5 +1,5 @@
 {
-  "name": "{{ name }}",
+  "name": "test",
   "version": "1.0.0",
   "description": "{{ description }}",
   "author": "{{ author }}",
@@ -8,18 +8,19 @@
     "prod": "gulp --silent --production"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-react": "^7.8.3",
     "babel-eslint": "^10.0.3",
-    "balm": "^2.0.4",
-    "eslint": "^6.6.0",
-    "eslint-plugin-react": "^7.16.0",
-    "gulp": "^4.0.2"
+    "balm": "^2.3.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.0",
+    "gulp": "^4.0.2",
+    "miragejs": "^0.1.33"
   },
   "private": true
 }
