@@ -7,7 +7,7 @@ balm.config = config;
 balm.go(mix => {
   if (mix.env.isProd) {
     // For test data
-    mix.copy('./app/api/*', './dist/api');
+    mix.copy('./app/data/*', './dist/api');
 
     // Publish assets
     mix.publish();
