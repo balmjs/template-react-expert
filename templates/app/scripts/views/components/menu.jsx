@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 import axios from 'axios';
-import { isProd } from '@/config';
+import { DEBUG } from '@/config';
 
 function MyMenu() {
   let [menu, setMenu] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      let url = `/api/menu${isProd ? '.json' : ''}`;
+      let url = `/api/menu${DEBUG ? '' : '.json'}`;
       let response = await axios.get(url);
       let { code, message, data } = response.data;
       if (code === 200) {
