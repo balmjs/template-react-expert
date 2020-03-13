@@ -1,4 +1,4 @@
-# BalmJS template - react-expert
+# BalmJS template - `react-expert`
 
 > A React project with router
 
@@ -24,4 +24,4 @@ npm run dev
 npm run prod
 ```
 
-> thx [BalmJS](https://balmjs.com/)
+- thx [BalmJS](https://balmjs.com/)
