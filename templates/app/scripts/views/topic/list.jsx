@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Link, Route } from 'react-router-dom';
 import RouteWithSubRoutes from '@/routes/config';
 
@@ -44,5 +45,10 @@ function Topics({ routes, match }) {
     </div>
   );
 }
+
+Topics.propTypes = {
+  routes: PropTypes.array,
+  match: PropTypes.object
+};
 
 export default Topics;
