@@ -2,16 +2,17 @@
 
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint',
-    ecmaVersion: 2019,
+    ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true
     }
   },
   env: {
-    browser: true
+    browser: true,
+    jest: true
   },
   plugins: ['react'],
   extends: ['eslint:recommended', 'plugin:react/recommended'],

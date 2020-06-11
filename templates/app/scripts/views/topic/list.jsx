@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Route } from 'react-router-dom';
-import RouteWithSubRoutes from '../../routes/config';
+import RouteWithSubRoutes from '@/routes/config';
 
 function Topics({ routes, match }) {
   let [submenu] = useState([
