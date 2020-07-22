@@ -1,13 +1,13 @@
-import TopicList from '@/views/topic/list';
-import TopicDetail from '@/views/topic/detail';
+import TopicList from '@/views/demo/list';
+import TopicDetail from '@/views/demo/detail';
 
 let topicRoutes = [
   {
-    path: '/topics',
+    path: '/demo',
     component: TopicList,
     routes: [
       {
-        path: '/topics/:id',
+        path: '/demo/:id',
         component: TopicDetail
       }
     ]

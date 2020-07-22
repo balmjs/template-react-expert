@@ -1,14 +1,14 @@
 import baseRoutes from './base';
-import topicRoutes from './topic';
+import demoRoutes from './demo';
 import NotFound from '@/views/not-found';
 
-let otherRoutes = [
+const otherRoutes = [
   {
     path: '*',
     component: NotFound
   }
 ];
 
-let routes = baseRoutes.concat(topicRoutes, otherRoutes);
+let routes = baseRoutes.concat(demoRoutes, otherRoutes);
 
 export default routes;

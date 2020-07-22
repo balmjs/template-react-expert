@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => (
   <div className="page--home">
-    <h2>Home page</h2>
+    <h2>Hello BalmJS</h2>
   </div>
 );
 

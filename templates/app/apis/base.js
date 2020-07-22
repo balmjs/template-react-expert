@@ -13,8 +13,8 @@ export function getBase(server) {
           url: '/about'
         },
         {
-          name: 'Topics',
-          url: '/topics'
+          name: 'Demo',
+          url: '/demo'
         }
       ]
     };
