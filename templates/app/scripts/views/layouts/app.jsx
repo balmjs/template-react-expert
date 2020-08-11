@@ -14,7 +14,7 @@ function App() {
         <h2>Welcome to React</h2>
       </div>
       <p>
-        thx <a href="//balmjs.com/">BalmJS</a>
+        thx <a href="//balm.js.org/">BalmJS</a>
       </p>
       <hr />
       <Router>
