@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../app/scripts/views/layouts/app';
+import App from '@/views/layouts/app';
 
 describe('Hello BalmJS', () => {
   it('should be "Welcome to React"', () => {
